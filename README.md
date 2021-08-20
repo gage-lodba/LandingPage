@@ -1,5 +1,5 @@
 # LandingPage
-Simple html page that you can customize to your liking.
+Simple html landing page that you can customize to your liking, it includes 3 buttons and a title or display text.
 
 # Customizing
 ### Video background
