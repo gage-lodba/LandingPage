@@ -11,4 +11,4 @@ The button text can be changed by changing `button` and putting whatever you wan
 Changing colors for buttons and text are easy look near the bottem of the html file and look for `color` and `background-color`.
 
 ### Sample
-![image](https://user-images.githubusercontent.com/38990407/130174189-1b86a88d-c7fb-4e8a-822e-41e96e430786.png)
+![image](https://user-images.githubusercontent.com/38990407/130178347-cf9597cc-a808-4528-a4e9-351c73128d9e.png)
