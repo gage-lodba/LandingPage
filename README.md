@@ -17,5 +17,5 @@ Changing colors for buttons and text are easy look near the bottem of the html f
 ### Effects
 The title or display name has glow effect that is commented out all you have to do is uncomment it and it'll work.
 
-### Sample
+# Sample
 ![image](https://user-images.githubusercontent.com/38990407/130178347-cf9597cc-a808-4528-a4e9-351c73128d9e.png)
