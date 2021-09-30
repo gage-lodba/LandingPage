@@ -1,87 +1,31 @@
-<head>
-    <title>title</title>
-    <link rel="shortcut icon" href="icon.ico"/>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    </style>
-</head>
-<body>
-    <div class="video-container">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>title</title>
+        <link rel="shortcut icon" href="icon.ico"/>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <!-- Video -->
         <video autoplay muted loop id="myVideo">
             <source src="video.mp4" type="video/mp4"/>
         </video>
-    </div>
-    <div class="grid">
-        <div class="content">
-            <h1 class="title">Name</h1>
-            <a href="link">
-                <button class="button">button</button>
-            </a>
-            <a href="link">
-                <button class="button">button</button>
-            </a>
-            <a href="link">
-                <button class="button">button</button>
-            </a>
+
+        <!-- Grid -->
+        <div class="grid">
+            <div class="content">
+                <h1 class="displaytext">display text</h1>
+                <a href="link">
+                    <button class="button">button</button>
+                </a>
+                <a href="link">
+                    <button class="button">button</button>
+                </a>
+                <a href="link">
+                    <button class="button">button</button>]
+                </a>
+            </div>
         </div>
-    </div>
-</body>
-
-<style>
-
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.grid {
-    display: grid;
-    place-items: center;
-    height: 100%;
-    z-index: 10;
-    position: absolute; 
-    inset: 0;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    background: rgba(0, 0, 0, 0);
-}
-
-.content {
-    padding-left: 500;
-    padding-right: 500;
-}
-
-.button {
-    float: left;
-    background-color: #202020;
-    color: white;
-    font-size: 16px;
-    padding: 16px 64px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin-left: 25;
-    margin-right: 25;
-}
-
-.button:hover {
-    background-color: red;
-    color: white;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.title {
-    font-size: 72px;
-    text-align: center;
-    text-shadow: 2px 2px black;
-    /* add neon effect (optional)
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-    */
-}
-
-</style>
+    </body>
+</html>
