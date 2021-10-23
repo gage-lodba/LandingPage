@@ -7,6 +7,9 @@
     --Button-Normal: rgb(32, 32, 32);
     --Button-Hover: rgb(40, 40, 40);
     --Button-Active: rgb(24, 24, 24);
+
+    --Inner-Glow: rgb(255, 255, 255);
+    --Outter-Glow: rgb(230, 0, 115);
 }
 
 * {
@@ -14,11 +17,12 @@
 }
 
 #myVideo {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
-    bottom: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .grid {
@@ -31,21 +35,22 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.content {
-    padding-left: 500;
-    padding-right: 500;
-}
-
 .displaytext {
     font-family: 'Cedarville Cursive', cursive;
     font-size: 128px;
 
-    margin-bottom: 0;
+    margin: 0;
 
     text-align: center;
 
     /* add neon effect*/
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px var(--Inner-Glow), 
+                0 0 20px var(--Inner-Glow), 
+                0 0 30px var(--Outter-Glow), 
+                0 0 40px var(--Outter-Glow), 
+                0 0 50px var(--Outter-Glow), 
+                0 0 60px var(--Outter-Glow), 
+                0 0 70px var(--Outter-Glow);
 }
 
 audio { 
