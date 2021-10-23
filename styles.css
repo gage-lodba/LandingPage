@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+:root {
+    --Text-Color: #ffffff;
+
+    --Button-Normal: rgb(32, 32, 32);
+    --Button-Hover: rgb(40, 40, 40);
+    --Button-Active: rgb(24, 24, 24);
+}
+
+* {
+    color: var(--Text-Color);
+}
 
 #myVideo {
     position: fixed;
@@ -15,7 +28,6 @@
     z-index: 10;
     position: absolute; 
     inset: 0;
-    color: white;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -24,31 +36,15 @@
     padding-right: 500;
 }
 
-button {
-    float: left;
-    background-color: #202020;
-    color: white;
-    font-size: 16px;
-    padding: 16px 64px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin-left: 25;
-    margin-right: 25;
-}
-
-button:hover {
-    background-color: red;
-    color: white;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
 .displaytext {
+    font-family: 'Cedarville Cursive', cursive;
     font-size: 128px;
+
+    margin-bottom: 0;
+
     text-align: center;
-    color: #fff;
+
+    color: var(--Text-Color);
     /* add neon effect*/
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
 }
@@ -57,18 +53,23 @@ audio {
     display:none;
 }
 
-body {
-    background-color: #202020;
-}
-
 a {
-    color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    background-color: var(--Button-Normal);
+
+    text-decoration: none;
+    text-align: center;
+
+    padding: 14px 16px;
+    width: 150px;
+    
+    border-radius: 8px;
 }
 
-title {
-    display: none;
+a:hover {
+    background-color: var(--Button-Hover);
 }
 
-link {
-    display: none;
+a:active {
+    background-color: var(--Button-Active);
 }
