@@ -1,80 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 
-:root {
-    --Text-Color: #ffffff;
+* {
+    --Text-Color: rgb(255, 255, 255);
 
     --Button-Normal: rgb(32, 32, 32);
     --Button-Hover: rgb(40, 40, 40);
     --Button-Active: rgb(24, 24, 24);
 
-    --Inner-Glow: rgb(255, 255, 255);
-    --Outter-Glow: rgb(230, 0, 115);
+    --Inner-Glow: #add8e6;
+    --Outter-Glow: #adbce6;
 }
 
-* {
-    color: var(--Text-Color);
+html,
+body {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
     user-select: none;
 }
 
-#myVideo {
-    object-fit: cover;
+video {
     width: 100vw;
     height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+
+    position: absolute;
+    object-fit: cover;
+
+    z-index: 0;
 }
 
-.grid {
-    display: grid;
-    place-items: center;
-    height: 100%;
-    z-index: 10;
-    position: absolute; 
-    inset: 0;
-    font-family: 'Roboto', sans-serif;
+audio {
+    display: none;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+
+    z-index: 1;
+
+    align-items: center;
+    justify-content: center;
 }
 
 .displaytext {
+    color: var(--Text-Color);
+
     font-family: 'Cedarville Cursive', cursive;
     font-size: 128px;
 
     margin: 0;
+    padding: 0;
+
+    width: 100%;
 
     text-align: center;
-
-    /* add neon effect*/
-    text-shadow: 0 0 10px var(--Inner-Glow), 
-                0 0 20px var(--Inner-Glow), 
-                0 0 30px var(--Outter-Glow), 
-                0 0 40px var(--Outter-Glow), 
-                0 0 50px var(--Outter-Glow), 
-                0 0 60px var(--Outter-Glow), 
-                0 0 70px var(--Outter-Glow);
-}
-
-audio { 
-    display:none;
+    text-shadow:
+        0 0 10px var(--Inner-Glow),
+        0 0 20px var(--Inner-Glow),
+        0 0 30px var(--Outter-Glow),
+        0 0 40px var(--Outter-Glow);
 }
 
 a {
-    display: inline-block;
     background-color: var(--Button-Normal);
+    color: var(--Text-Color);
 
     text-decoration: none;
     text-align: center;
 
+    font-family: 'Roboto', sans-serif;
+
+    transition: ease-in-out 50ms;
+
     padding: 14px 16px;
+    margin: auto 10px;
+
     width: 150px;
-    
+
     border-radius: 8px;
 }
 
 a:hover {
     background-color: var(--Button-Hover);
+    scale: 1.125;
 }
 
 a:active {
     background-color: var(--Button-Active);
+    scale: 1.25;
 }
