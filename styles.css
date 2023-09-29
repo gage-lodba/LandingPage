@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
 
 * {
     --Text-Color: rgb(255, 255, 255);
@@ -57,7 +57,7 @@ div {
 .displaytext {
     color: var(--Text-Color);
 
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Smooch', cursive;
     font-size: 128px;
 
     margin: 0;
