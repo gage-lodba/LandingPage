@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
 
-* {
-    --Text-Color: rgb(255, 255, 255);
+:root {
+    --Text-Color: #ffffff;
 
-    --Button-Normal: rgb(32, 32, 32);
-    --Button-Hover: rgb(40, 40, 40);
-    --Button-Active: rgb(24, 24, 24);
+    --Button-Normal: #202020;
+    --Button-Hover: #282828;
+    --Button-Active: #181818;
 
     --Inner-Glow: #add8e6;
     --Outter-Glow: #adbce6;
