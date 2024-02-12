@@ -1,103 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch&display=swap');
 
 :root {
     --Text-Color: #ffffff;
-
     --Button-Normal: #202020;
     --Button-Hover: #282828;
     --Button-Active: #181818;
-
     --Inner-Glow: #add8e6;
-    --Outter-Glow: #adbce6;
+    --Outer-Glow: #adbce6;
 }
 
-html,
 body {
-    display: flex;
-    flex-wrap: wrap;
-
-    align-items: center;
-    justify-content: center;
-
-    height: 100vh;
-    width: 100vw;
-
     margin: 0;
     padding: 0;
-
-    overflow: hidden;
+    overflow-x: hidden;
     user-select: none;
+    scroll-behavior: smooth;
 }
 
 video {
-    width: 100vw;
-    height: 100vh;
-
-    position: absolute;
-    object-fit: cover;
-
-    z-index: 0;
-}
-
-audio {
-    display: none;
-}
-
-div {
-    display: flex;
-    flex-wrap: wrap;
-
-    z-index: 1;
-
-    align-items: center;
-    justify-content: center;
-}
-
-.displaytext {
-    color: var(--Text-Color);
-
-    font-family: 'Smooch', cursive;
-    font-size: 128px;
-
-    margin: 0;
-    padding: 0;
-
-    width: 100%;
-
-    text-align: center;
-    text-shadow:
-        0 0 10px var(--Inner-Glow),
-        0 0 20px var(--Inner-Glow),
-        0 0 30px var(--Outter-Glow),
-        0 0 40px var(--Outter-Glow);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
 
 a {
     background-color: var(--Button-Normal);
     color: var(--Text-Color);
-
     text-decoration: none;
     text-align: center;
-
     font-family: 'Roboto', sans-serif;
-
-    transition: ease-in-out 75ms;
-
+    transition: all 75ms ease;
     padding: 14px 16px;
-    margin: auto 10px;
-
-    width: 150px;
-
     border-radius: 8px;
+    cursor: pointer;
 }
 
 a:hover {
     background-color: var(--Button-Hover);
-    scale: 1.125;
+    transform: scale(1.125);
 }
 
 a:active {
     background-color: var(--Button-Active);
-    scale: 1.25;
+    transform: scale(1.25);
+}
+
+
+.landingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.landingContainer div div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.landingContainer h1 {
+    color: var(--Text-Color);
+    font-family: 'Smooch', cursive;
+    font-size: 5vw;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 0 10px var(--Inner-Glow), 0 0 20px var(--Inner-Glow), 0 0 30px var(--Outer-Glow), 0 0 40px var(--Outer-Glow);
 }
