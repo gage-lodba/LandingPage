@@ -2,77 +2,101 @@
 
 :root {
     --Text-Color: #ffffff;
+
     --Button-Normal: #202020;
     --Button-Hover: #282828;
     --Button-Active: #181818;
+
     --Inner-Glow: #add8e6;
     --Outer-Glow: #adbce6;
 }
 
-body {
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
     user-select: none;
     scroll-behavior: smooth;
 }
 
 video {
     position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+
+    left: 0;
+    top: 0;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
     z-index: -1;
 }
 
-a {
-    background-color: var(--Button-Normal);
-    color: var(--Text-Color);
-    text-decoration: none;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    transition: all 75ms ease;
-    padding: 14px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-a:hover {
-    background-color: var(--Button-Hover);
-    transform: scale(1.125);
-}
-
-a:active {
-    background-color: var(--Button-Active);
-    transform: scale(1.25);
-}
-
-
-.landingContainer {
+div {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
 
-.landingContainer div div {
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
+
     justify-content: center;
+
     gap: 10px;
 }
 
+h1 {
+    flex: 1 1 100%;
 
-.landingContainer h1 {
     color: var(--Text-Color);
+
     font-family: 'Smooch', cursive;
     font-size: 5vw;
+
     margin: 0;
     padding: 0;
+
     text-align: center;
     text-shadow: 0 0 10px var(--Inner-Glow), 0 0 20px var(--Inner-Glow), 0 0 30px var(--Outer-Glow), 0 0 40px var(--Outer-Glow);
+}
+
+input {
+    background-color: var(--Button-Normal);
+    color: var(--Text-Color);
+
+    border: none;
+    border-radius: 8px;
+
+    width: 150px;
+    height: 50px;
+
+    transition: all 75ms ease;
+}
+
+input:hover {
+    background-color: var(--Button-Hover);
+    transform: scale(1.05);
+}
+
+input:active {
+    background-color: var(--Button-Active);
+    transform: scale(1.075);
 }
