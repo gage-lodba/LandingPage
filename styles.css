@@ -1,11 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch&display=swap');
+@font-face {
+    font-family: 'Smooch';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/smooch/v7/o-0LIps4xW8U1xUxiaB-.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 :root {
     --Text-Color: #ffffff;
 
     --Button-Normal: #202020;
     --Button-Hover: #282828;
-    --Button-Active: #181818;
+    --Button-Active: #303030;
 
     --Inner-Glow: #add8e6;
     --Outer-Glow: #adbce6;
@@ -85,13 +92,16 @@ input {
     border: none;
     border-radius: 8px;
 
+    outline: none;
+
     width: 150px;
     height: 50px;
 
     transition: all 75ms ease;
 }
 
-input:hover {
+input:hover,
+input:focus-visible {
     background-color: var(--Button-Hover);
     transform: scale(1.05);
 }
