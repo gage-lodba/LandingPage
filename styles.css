@@ -85,7 +85,7 @@ h1 {
     text-shadow: 0 0 10px var(--Inner-Glow), 0 0 20px var(--Inner-Glow), 0 0 30px var(--Outer-Glow), 0 0 40px var(--Outer-Glow);
 }
 
-input {
+input[type="button"] {
     background-color: var(--Button-Normal);
     color: var(--Text-Color);
 
@@ -98,6 +98,8 @@ input {
     height: 50px;
 
     transition: all 75ms ease;
+
+    cursor: pointer;
 }
 
 input:hover,
