@@ -1,13 +1,15 @@
-const inputs = document.querySelectorAll("input");
-const urls = {
-  "link #1": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  "link #2": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  "link #3": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-};
+const links = [
+  { label: "Link #1", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+  { label: "Link #2", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+  { label: "Link #3", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+];
 
-inputs.forEach((input) => {
-  input.addEventListener("click", () => {
-    const value = input.value.toLowerCase();
-    window.location.href = urls[value];
-  });
-});
+const container = document.querySelector(".links");
+
+for (const { label, url } of links) {
+  const anchor = document.createElement("a");
+  anchor.textContent = label;
+  anchor.href = url;
+  anchor.className = "button";
+  container.append(anchor);
+}
