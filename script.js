@@ -11,5 +11,7 @@ for (const { label, url } of links) {
   anchor.textContent = label;
   anchor.href = url;
   anchor.className = "button";
+  anchor.target = "_blank";
+  anchor.rel = "noopener noreferrer";
   container.append(anchor);
 }

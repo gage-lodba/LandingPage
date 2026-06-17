@@ -40,6 +40,8 @@ body {
     width: 100%;
     height: 100%;
 
+    background-color: #101010;
+
     align-items: center;
     justify-content: center;
 
@@ -56,8 +58,27 @@ video {
     left: 0;
     top: 0;
 
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+/* Darken the video so the title and buttons stay legible over any frame. */
+body::before {
+    content: "";
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.45);
 
     z-index: 0;
 }
@@ -130,4 +151,21 @@ h1 {
 .button:active {
     background-color: var(--Button-Active);
     transform: scale(1.075);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* Hide the autoplaying background; the solid body background remains. */
+    video {
+        display: none;
+    }
+
+    .button {
+        transition: none;
+    }
+
+    .button:hover,
+    .button:focus-visible,
+    .button:active {
+        transform: none;
+    }
 }
